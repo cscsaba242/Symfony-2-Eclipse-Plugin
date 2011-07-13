@@ -1,11 +1,17 @@
 package org.eclipse.symfony.twig;
 
 import org.eclipse.php.internal.core.PHPLanguageToolkit;
+import org.eclipse.twig.core.TwigNature;
 import org.eclipse.twig.core.documentModel.provisional.contenttype.ContentTypeIdForTwig;
 
 @SuppressWarnings("restriction")
 public class TwigLanguageToolkit extends PHPLanguageToolkit {
 	
+	@Override
+	public String getNatureId() {
+
+		return TwigNature.NATURE_ID;
+	}
 	
 	@Override
 	public String getLanguageContentType() {
@@ -24,5 +30,4 @@ public class TwigLanguageToolkit extends PHPLanguageToolkit {
 		return twigExt;
 		
 	}
-
 }
