@@ -1,29 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?eclipse version="3.4"?>
 <plugin>
+
    <extension
          point="org.eclipse.twig.core.completionStrategyResolvers">
       <resolver
             class="org.eclipse.symfony.twig.codeassist.TwigCompletionStrategyFactory">
       </resolver>
    </extension>
+   
    <extension
          point="org.eclipse.twig.core.completionContextResolvers">
       <resolver
             class="org.eclipse.symfony.twig.codeassist.TwigCompletionContextResolver">
       </resolver>
    </extension>
+   
    <extension
-         id="id2"
+         id="org.eclipse.symfony.twig.proposalComputer"
          point="org.eclipse.dltk.ui.scriptCompletionProposalComputer">
       <scriptCompletionProposalComputer
             categoryId="org.eclipse.dltk.ui.scriptTypeProposalCategory"
             class="org.eclipse.symfony.ui.contentassist.SymfonyCompletionProposalComputer"
-            toolkitId="org.eclipse.php.core.PHPNature">
+            toolkitId="org.eclipse.twig.core.TwigNature">
          <partition
                type="org.eclipse.twig.TWIG_DEFAULT">
          </partition>
       </scriptCompletionProposalComputer>
    </extension>
-
+   
+   <extension
+         point="org.eclipse.dltk.core.selectionEngine">
+      <selectionEngine
+            class="org.eclipse.symfony.core.codeassist.SymfonySelectionEngine"
+            nature="org.eclipse.twig.core.TwigNature"
+            priority="150">
+      </selectionEngine>         
+   </extension>
+   
+   <extension
+         point="org.eclipse.dltk.core.language">
+      <language
+            class="org.eclipse.symfony.twig.TwigLanguageToolkit"
+            nature="org.eclipse.twig.core.TwigNature"
+            priority="400">
+      </language>
+   </extension> 
+      
+      
 </plugin>

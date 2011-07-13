@@ -13,7 +13,10 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.wst.sse.core,
  org.eclipse.dltk.ui;bundle-version="3.0.0",
  org.eclipse.php.ui;bundle-version="3.0.0",
- org.eclipse.symfony.ui;bundle-version="1.0.25"
+ org.eclipse.symfony.ui,
+ org.eclipse.twig.ui,
+ org.eclipse.core.resources
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-Vendor: Symfony
+Export-Package: org.eclipse.symfony.twig

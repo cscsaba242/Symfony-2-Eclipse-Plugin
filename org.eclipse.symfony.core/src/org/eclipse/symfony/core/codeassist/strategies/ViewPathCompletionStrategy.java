@@ -47,8 +47,6 @@ import org.eclipse.symfony.core.model.ViewPath;
 @SuppressWarnings({ "restriction", "deprecation" })
 public class ViewPathCompletionStrategy extends MethodParameterKeywordStrategy {
 
-	private static int workaroundCount = 0;
-
 	public ViewPathCompletionStrategy(ICompletionContext context) {
 		super(context);
 
@@ -59,6 +57,8 @@ public class ViewPathCompletionStrategy extends MethodParameterKeywordStrategy {
 
 		ViewPathArgumentContext context = (ViewPathArgumentContext) getContext();		
 		CompletionRequestor req = context.getCompletionRequestor();
+		
+		System.err.println("SF: " + req.getClass());		
 		
 		if (req.getClass() == PHPCompletionProposalCollector.class) {
 			return;			

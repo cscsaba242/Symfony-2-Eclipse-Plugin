@@ -49,13 +49,7 @@
     </category>
  </extension>
  
- <extension
-       point="org.eclipse.help.contexts">
-    <contexts
-          file="contexts.xml">
-    </contexts>
- </extension>
- 
+
  
  <extension
        point="org.eclipse.ui.workbench.texteditor.hyperlinkDetectors">
@@ -194,9 +188,6 @@
           toolkitId="org.eclipse.php.core.PHPNature">
        <partition
              type="org.eclipse.php.PHP_DEFAULT">
-       </partition>
-       <partition
-             type="org.eclipse.twig.TWIG_DEFAULT">
        </partition>
     </scriptCompletionProposalComputer>
  </extension>

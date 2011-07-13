@@ -17,13 +17,14 @@ import org.eclipse.php.internal.core.codeassist.CodeAssistUtils;
 import org.eclipse.php.internal.core.codeassist.ICompletionReporter;
 import org.eclipse.php.internal.core.codeassist.strategies.MethodParameterKeywordStrategy;
 import org.eclipse.php.internal.core.model.PhpModelAccess;
-import org.eclipse.php.internal.ui.editor.contentassist.PHPCompletionProposalCollector;
 import org.eclipse.symfony.core.model.Bundle;
 import org.eclipse.symfony.core.model.Controller;
 import org.eclipse.symfony.core.model.SymfonyModelAccess;
 import org.eclipse.symfony.core.model.Template;
 import org.eclipse.symfony.core.model.ViewPath;
 import org.eclipse.symfony.twig.codeassist.context.ViewPathArgumentContext;
+import org.eclipse.symfony.ui.contentassist.SymfonyCompletionProposalCollector;
+import org.eclipse.twig.ui.editor.contentassist.TwigCompletionProposalCollector;
 
 
 /**
@@ -43,13 +44,6 @@ import org.eclipse.symfony.twig.codeassist.context.ViewPathArgumentContext;
 public class ViewPathCompletionStrategy extends MethodParameterKeywordStrategy {
 
 	
-	/**
-	 * 
-	 * @see FIXME in org.eclipse.symfony.core.codeassist.strategies.RouteCompletionStrategy
-	 */
-	private static int workaroundCount = 0;
-
-
 	public ViewPathCompletionStrategy(ICompletionContext context) {
 		super(context);
 
@@ -61,19 +55,11 @@ public class ViewPathCompletionStrategy extends MethodParameterKeywordStrategy {
 	
 		ViewPathArgumentContext context = (ViewPathArgumentContext) getContext();
 		CompletionRequestor req = context.getCompletionRequestor();
-		
-		if (req.getClass() == PHPCompletionProposalCollector.class) {
+			
+		if (req.getClass() != SymfonyCompletionProposalCollector.class) {
 			return;			
 		}
 
-		if (workaroundCount == 0) {
-			workaroundCount++;
-			
-		} else {
-			workaroundCount = 0;
-			return;
-		}
-		
 		
 		SymfonyModelAccess model = SymfonyModelAccess.getDefault();
 		ISourceModule module = context.getSourceModule();
