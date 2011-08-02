@@ -7,8 +7,8 @@ import org.eclipse.symfony.core.log.Logger;
 import org.eclipse.symfony.core.model.ViewPath;
 import org.eclipse.symfony.core.util.text.SymfonyTextSequenceUtilities;
 import org.eclipse.symfony.twig.codeassist.strategies.ViewPathCompletionStrategy;
-import org.eclipse.twig.core.codeassist.context.QuotesContext;
-import org.eclipse.twig.core.util.text.TwigTextSequenceUtilities;
+import com.dubture.twig.core.codeassist.context.QuotesContext;
+import com.dubture.twig.core.util.text.TwigTextSequenceUtilities;
 
 /**
  * 

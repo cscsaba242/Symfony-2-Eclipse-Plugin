@@ -5,7 +5,7 @@ import org.eclipse.symfony.twig.codeassist.context.RouteCompletionContext;
 import org.eclipse.symfony.twig.codeassist.context.TemplateVariableCompletionContext;
 import org.eclipse.symfony.twig.codeassist.context.TemplateVariableFieldCompletionContext;
 import org.eclipse.symfony.twig.codeassist.context.ViewPathArgumentContext;
-import org.eclipse.twig.core.codeassist.ITwigCompletionContextResolver;
+import com.dubture.twig.core.codeassist.ITwigCompletionContextResolver;
 
 
 /**

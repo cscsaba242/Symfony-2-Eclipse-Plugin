@@ -16,7 +16,7 @@ import org.eclipse.symfony.core.index.SymfonyElementResolver.TemplateField;
 import org.eclipse.symfony.core.model.SymfonyModelAccess;
 import org.eclipse.symfony.core.util.PathUtils;
 import org.eclipse.symfony.twig.codeassist.context.TemplateVariableCompletionContext;
-import org.eclipse.twig.core.codeassist.strategies.AbstractTwigCompletionStrategy;
+import com.dubture.twig.core.codeassist.strategies.AbstractTwigCompletionStrategy;
 
 
 /**

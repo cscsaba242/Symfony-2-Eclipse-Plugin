@@ -14,7 +14,7 @@ import org.eclipse.symfony.twig.codeassist.context.ViewPathArgumentContext;
 import org.eclipse.symfony.twig.codeassist.strategies.TemplateVariableCompletionStrategy;
 import org.eclipse.symfony.twig.codeassist.strategies.TemplateVariableFieldCompletionStrategy;
 import org.eclipse.symfony.twig.codeassist.strategies.ViewPathCompletionStrategy;
-import org.eclipse.twig.core.codeassist.ITwigCompletionStrategyFactory;
+import com.dubture.twig.core.codeassist.ITwigCompletionStrategyFactory;
 
 /**
  * 

@@ -16,8 +16,8 @@ import org.eclipse.php.internal.core.codeassist.ICompletionReporter;
 import org.eclipse.php.internal.core.model.PhpModelAccess;
 import org.eclipse.symfony.core.index.SymfonyElementResolver.TemplateField;
 import org.eclipse.symfony.core.model.SymfonyModelAccess;
-import org.eclipse.twig.core.codeassist.context.VariableFieldContext;
-import org.eclipse.twig.core.codeassist.strategies.AbstractTwigCompletionStrategy;
+import com.dubture.twig.core.codeassist.context.VariableFieldContext;
+import com.dubture.twig.core.codeassist.strategies.AbstractTwigCompletionStrategy;
 
 
 
